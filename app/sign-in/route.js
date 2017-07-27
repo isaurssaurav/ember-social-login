@@ -8,7 +8,7 @@ export default Ember.Route.extend({
     return this.get('session').fetch().catch(function() {});
   },
   actions:{
-    signIn(){
+    logInFire(){
       this.get('session').open('firebase',{
         provider:'password',
         email: this.controller.get('email'),
