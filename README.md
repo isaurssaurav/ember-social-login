@@ -1,21 +1,16 @@
-# gist-js
+# Ember Social Login
+Uses a Ember fire for firebase and ember torii
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
 
 ## Prerequisites
 
-You will need the following things properly installed on your computer.
-
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with NPM)
-* [Ember CLI](https://ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+* Setup necessary app to respective social media 
+* Setup to fire base for in authentication menu
 
 ## Installation
 
 * `git clone <repository-url>` this repository
-* `cd gist-js`
+* `cd ember-social-login`
 * `npm install`
 
 ## Running / Development
@@ -23,28 +18,14 @@ You will need the following things properly installed on your computer.
 * `ember serve`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
+### Setup a app
 
-Make use of the many generators for code, try `ember help generate` for more details
+* In config/environment.js add
+* `firebase: {
+      apiKey: "your api key",
+      authDomain: "domain",
+      databaseURL: "url",
+      storageBucket: "storage bucket"
+    }`
 
-### Running Tests
 
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](https://ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
