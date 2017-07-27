@@ -1,7 +1,9 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  session: Ember.inject.service(),
+  session: Ember.inject.service(), //this is used for facebook, twitter and other....
+
+
   beforeModel(){
     return this.get('session').fetch().catch(function() {});
   },
@@ -16,12 +18,18 @@ export default Ember.Route.extend({
          settings: {
            scope: 'public_profile',
          }
-      }).then(function(data){
-        console.log('data ==>',data);
+      }).then(data => {
+        this.controller.set('user',data);
       })
     },
     signOut:function(){
       this.get('session').close();
+    },
+    signInFire:function(){
+      this.transitionTo('sign-in');
+    },
+    signUpFire:function(){
+      this.transitionTo('sign-up');
     }
   }
 

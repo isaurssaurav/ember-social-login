@@ -1,6 +1,8 @@
 # Ember Social Login
 Uses a Ember fire for firebase and ember torii for user authentication
 
+## Demo
+[https://ember-gist.firebaseapp.com/](https://ember-gist.firebaseapp.com/)
 
 ## Prerequisites
 
